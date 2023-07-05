@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="/stylesheets/addProduct.css">
+<link rel="stylesheet" href="/stylesheets/sidebar.css">
+
+{{!-- {{>navbar}} --}}
+<div class="nav" style="background-color: black;">
+  <h4 style="color:gold ;">Add Product</h4>
+<a href="#" class="logout"  style="color: gold;">LOGOUT</a>
+</div>
+<header class="add">
+</header>
+{{!-- <h3 class="page-title">Add Product</h3> --}}
+<main class="add" style="background-color: white;">
+  <form method="post" action="/admin/addproduct" enctype="multipart/form-data">
+    <div style="background-color: white;">
+      <label >Product Name</label>
+      <input class="add" name="name" required/>
+    </div>
+    <div style="background-color: white;">
+      <label>
+        <span style="background-color: white;"> Price</span>
+      </label>
+      <input type="text" min="0" class="add" name="price" required/>
+    </div>
+    <div style="background-color: white;">
+      <label>
+        <span style="background-color: white;">Offer</span>
+      </label>
+      <input type="number" min="0" class="add" name="offer" required/>
+    </div>
+    <div style="background-color: white;">
+      <label>
+        <span style="background-color: white;"  >Description</span>
+      </label>
+      <input type="text"  class="add" required name="description">
+    </div>
+    <div style="background-color: white;">
+      <label>
+        <span style="background-color: white;">Image</span>
+      </label>
+      <div class="image-input" style="background-color: white;">
+        <input type="file" name="image" required class="choose " style="background-color: white;"> 
+      </div>
+    </div>
+    <div style="background-color: white;">
+      <input type="submit" value="ADD" class="button" ">
+    </div>
+  </form>
+</main>
